@@ -41,9 +41,10 @@
         <div th:fragment="job-display">
             <div th:each="job : ${jobs}">
                 <table class="job-listing">
+                    <th th:text="${jobs.size()} Result(s)"></th>
                     <tr th:each="jobEntry : ${job}">
-                        <td th:text="${#strings.capitalizeWords(jobEntry.key)}"> </td>
-                        <td th:text="${#strings.capitalizeWords(jobEntry.value)}"> </td>
+                        <td th:text="${#strings.capitalizeWords(jobEntry.key)}"></td>
+                        <td th:text="${#strings.capitalizeWords(jobEntry.value)}"></td>
                     </tr>
                 </table>
             </div>
